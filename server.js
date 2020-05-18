@@ -76,8 +76,6 @@ app.post('/files/replace/:oldFile/:newFile', async (req, res) => {
 // response: {status: 'ok', report }
 app.get('/report', async (req, res, next) => {
     try {
-
-
         const report = await readFile(path.join(__dirname, 'test/report.json'), 'utf-8');
         res.send({ status: 'ok', report });
     } catch (err) {
